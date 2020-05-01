@@ -1,4 +1,6 @@
 import React from 'react';
+import './global.css';
+
 import { AuthProvider } from './contexts/auth';
 
 import Routes from './routes';
@@ -6,9 +8,9 @@ import Routes from './routes';
 function App() {
   return (
     <div>
-    <AuthProvider>
-      <Routes />
-    </AuthProvider>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
     </div>
   );
 }
