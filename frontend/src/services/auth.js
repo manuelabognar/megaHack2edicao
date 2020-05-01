@@ -11,6 +11,6 @@ export function signIn() {
           password: '42',
         },
       });
-    }, 1000);
+    }, 500);
   });
 }
