@@ -38,7 +38,7 @@ export default function Register() {
         <section>
           <h2 className="logo">Sistema de Consulta de Matrículas</h2>
 
-            <h1>Cadastro</h1>
+            <h1>Cadastro de usuários</h1>
             <p>
               Cadastre-se e tenha acesso rápido e fácil a 
               documentos de cartórios.

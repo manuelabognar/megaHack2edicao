@@ -24,7 +24,7 @@ export function AuthProvider({ children }){
 
    
   async function signIn() {
-    const response = await auth.signIn();
+    const response = await auth.signInSolicitante();
 
     console.log(response);
 

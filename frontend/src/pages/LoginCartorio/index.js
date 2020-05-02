@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import {useAuth} from '../../contexts/auth';
 import { Link } from 'react-router-dom';
 
-
 import './styles.css';
 
-export default function SignIn() {
+export default function LoginCartorio() {
 
   const { signed, user, signIn } = useAuth();
 
@@ -31,6 +30,7 @@ export default function SignIn() {
 
         <form onSubmit = { handleSignIn } >
           <h2 className="logo">Sistema de Consulta de Matrículas</h2>
+          <p>Login Cartório</p>
 
           <input 
             placeholder = "E-mail" 
@@ -50,16 +50,16 @@ export default function SignIn() {
 
         </form>
 
-        <Link type="button" className="buttonClean" to="/cadastro">
+        <Link type="button" className="buttonClean" to="/cadastroCartorio">
           Cadastre-se
         </Link>
 
-        <Link type="button" className="buttonClean" to="/sobre">
-          Sobre nós 
-        </Link>
+        
+    <Link className="back-link" to="/">
+              Voltar
+            </Link>
 
     </section>
-
   </div>
   )
 
