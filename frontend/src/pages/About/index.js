@@ -5,37 +5,26 @@ import './styles.css';
 
 export default function About() {
   return (
-    <div className="about-container">
-      <div>
-        <header>
 
-        <h2 className="logo">Sistema de Consulta de Matrículas</h2>
-
-        <Link type="button" className="buttonClean" to="/loginCartorio">
-          Login Cartório
-        </Link>
-
-
-        <Link type="button" className="buttonClean" to="/loginSolicitante">
-          Login Solicitante
-        </Link>
-
-        </header>
+    <div className="register-container">
+      <div className="content">
         <main>
-          <br/><br/><br/>
+          <h2 className="logo">Sistema de Consulta de Matrículas</h2>
           <p>
-            Explicar a aplicação... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-            officia deserunt mollit anim id est laborum.
-          </p>
-
-
+            Unimos cartórios de todo o brasil para facilitar a transação de documentos, 
+            de forma prática, fácil e segura para ambas as partes
+           </p>
         </main>
-      </div>       
+
+        <section>
+          <Link type="button" className="buttonClean" to="/loginCartorio">
+            Sou um Cartório
+          </Link>
+          <Link type="button" className="buttonClean" to="/loginSolicitante">
+            Sou um Solicitante
+          </Link>
+        </section>
+      </div>
     </div>
   );
 }
