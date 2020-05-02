@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import {useAuth} from '../../contexts/auth'
+import {useAuth} from '../../contexts/auth';
+import { Link } from 'react-router-dom';
 
 
 import './styles.css';
@@ -29,7 +30,7 @@ export default function SignIn() {
     <section className="form">
 
         <form onSubmit = { handleSignIn } >
-          <h1>Sistema de Consulta de Matrículas</h1>
+          <h2 className="logo">Sistema de Consulta de Matrículas</h2>
 
           <input 
             placeholder = "E-mail" 
@@ -51,7 +52,9 @@ export default function SignIn() {
 
         <button className="button">Cadastrar-se</button>
 
-        <button className="buttonClean">Sobre nós</button>
+        <Link type="button" className="buttonClean" to="/sobre">
+          Sobre nós 
+        </Link>
 
     </section>
 
