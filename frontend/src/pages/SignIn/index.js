@@ -50,7 +50,9 @@ export default function SignIn() {
 
         </form>
 
-        <button className="button">Cadastrar-se</button>
+        <Link type="button" className="buttonClean" to="/cadastro">
+          Cadastre-se
+        </Link>
 
         <Link type="button" className="buttonClean" to="/sobre">
           Sobre nós 
