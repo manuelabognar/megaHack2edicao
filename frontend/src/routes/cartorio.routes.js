@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Dashboard from '../pages/Dashboard';
+import ProfileCartorio from '../pages/ProfileCartorio';
 import About from '../pages/About';
 
-export default function AppRoutes() {
+export default function CartorioRoutes() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/" exact component={Dashboard} />
         <Route path="/sobre" component={About} />
+        <Route path="/" component={ProfileCartorio} />
       </Switch>
   </BrowserRouter>
   ); 
