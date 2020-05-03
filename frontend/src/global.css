@@ -13,7 +13,7 @@ body {
   -webkit-flow-smoothing: antialiased;
 }
 
-input, button, textarea {
+input, button {
   font: 400 18px Roboto, sans-serif;
 }
 
@@ -29,17 +29,6 @@ form input {
   border-radius: 8px;
   padding: 0 24px;
   margin-top: 16px;
-}
-
-form textarea {
-  width:100%;
-  resize: none;
-  min-height: 140px;
-  color: #333333;
-  border: 1px solid #dcdce6;
-  border-radius: 8px;
-  padding: 0 24px;
-  line-height: 24px;
 }
 
 .logo {
@@ -98,10 +87,6 @@ form textarea {
   text-decoration: none;
   font-weight: 500;
   transition: opacity 0.2s;
-}
-
-.back-link svg{
-  margin-right: 8px;
 }
 
 .back-link:hover{
