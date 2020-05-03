@@ -12,7 +12,7 @@ function Routes() {
 
   console.log("logado? " + signed);
   
-  return signed ? <CartorioRoutes /> : <AuthRoutes />;
+  return signed ? <SolicitanteRoutes /> : <AuthRoutes />;
 }
 
 export default Routes;

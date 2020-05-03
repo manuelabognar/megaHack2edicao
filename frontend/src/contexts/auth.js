@@ -26,7 +26,7 @@ export function AuthProvider({ children }){
    
   async function signIn() {
 
-    const response = await auth.signInCartorio();
+    const response = await auth.signInSolicitante();
 
     setUser(response.user);
 

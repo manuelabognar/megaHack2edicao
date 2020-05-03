@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import {useAuth} from '../../contexts/auth'
 
 import './styles.css';
@@ -16,38 +17,84 @@ function ProfileCartorio () {
 
   return (
     <div className="profile-container">
-      <header>
-
-        <h2>Logo</h2>
-        <span>Bem vindo, {user.name}</span>
-        
-        <button title="Logout" onClick={handleSignOut}> Logout </button>
-
+      <header>        
+        <h2 className="logo">Sistema de Consulta de Matrículas</h2>
       </header>
 
-      <h1>Solicitações pendentes</h1>
+      <nav>
+        <span>Bem vindo, {user.name}</span>
+        <button title="Logout"  onClick={handleSignOut}> Sair </button>
+      </nav>
 
-      <ul>
+      <Link className="button">
+        Solicitar nova matrícula
+      </Link>
+
+      <div className="matriculasRecebidas">
+        <h1>Matrículas recebidas</h1>
+        <ul>
           <li>
+            <strong>Livro</strong>
+            <p>4324</p>
 
-            <div className="item">
-              <strong>NOME</strong>
-              <p>teste</p>
+            <strong>Número de matrícula</strong>
+            <p>47238947283</p>
 
-              <strong>DESCRIÇÃO</strong>
-              <p>dhasud</p>
+            <strong>Cartório Responsável</strong> 
+            <p> 42º Registro de matrícula XPTO</p>
 
-              <strong>VALOR</strong>
-              <p>hdausdhuas</p>
-            </div>
-            
-            <div className="item">
-            Enviar matrícula
-            </div>
+            <button className="button" type="submit">
+              Visualizar Matrícula
+            </button>                    
+          </li>
+
+          <li>
+            <strong>Livro</strong>
+            <p>4324</p>
+
+            <strong>Número de matrícula</strong>
+            <p>47238947283</p>   
+
+            <strong>Cartório Responsável</strong> 
+            <p> 42º Registro de matrícula XPTO</p> 
+
+            <button className="button" type="submit">
+              Visualizar Matrícula
+            </button>  
+
+          </li>
+
+        </ul>
+      </div>
+
+      <div className="matriculasPendentes">
+        <h1>Solicitações pendentes</h1>
+        <ul>
+          <li>
+            <strong>Livro</strong>
+            <p>4324</p>
+
+            <strong>Número de matrícula</strong>
+            <p>47238947283</p>
+
+            <strong>Cartório Responsável</strong> 
+            <p> 42º Registro de matrícula XPTO</p>
             
           </li>
-        ))}
-      </ul>
+
+          <li>
+            <strong>Livro</strong>
+            <p>4324</p>
+
+            <strong>Número de matrícula</strong>
+            <p>47238947283</p>
+
+            <strong>Cartório Responsável</strong> 
+            <p> 42º Registro de matrícula XPTO</p>
+          </li>
+        </ul>
+      </div>
+
     </div>
   );
 }
