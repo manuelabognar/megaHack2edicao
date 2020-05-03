@@ -4,7 +4,8 @@ import { Link, useHistory } from 'react-router-dom';
 import './styles.css';
 
 
-export default function RegisterSol() {
+export default function RegisterSolicitante() {
+  const [nome, setNome] = useState('');
   const [pj, setPj] = useState('');
   const [email, setEmail] = useState('');
   const [cep, setCep] = useState('');
