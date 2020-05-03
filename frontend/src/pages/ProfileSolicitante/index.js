@@ -7,8 +7,8 @@ function ProfileCartorio () {
 
   const { signed, user, signOut } = useAuth(); 
 
-  console.log (signed);
-  console.log (user);
+  //console.log (signed);
+  //console.log (user);
 
   function handleSignOut () {
     signOut();

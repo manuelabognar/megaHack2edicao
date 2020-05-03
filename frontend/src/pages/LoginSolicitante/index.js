@@ -12,7 +12,6 @@ export default function LoginSolicitante() {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
 
-
   async function handleSignIn(e) {
     e.preventDefault();
 

@@ -10,6 +10,7 @@ export function AuthProvider({ children }){
 
   useEffect(() => {
     async function loadStorageData () { 
+
       const storageUser = await localStorage.getItem('@RNAuth:user');
       const storageToken = await localStorage.getItem('@RNAuth:token');
 
@@ -24,9 +25,8 @@ export function AuthProvider({ children }){
 
    
   async function signIn() {
-    const response = await auth.signInSolicitante();
 
-    console.log(response);
+    const response = await auth.signInCartorio();
 
     setUser(response.user);
 
