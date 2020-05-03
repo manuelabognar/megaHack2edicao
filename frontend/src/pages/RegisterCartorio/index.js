@@ -53,8 +53,8 @@ export default function RegisterCartorio() {
 
             <h1>Cadastro de cartórios</h1>
             <p>
-              Cadastre-se, e facilite o envio de documentos de 
-              forma econômica, online e segura
+              Cadastre-se e facilite o envio de matrículas de 
+              forma econômica, online e segura.
             </p>
 
             <Link className="back-link" to="/">
@@ -66,7 +66,7 @@ export default function RegisterCartorio() {
         <form onSubmit={ handleRegister } >
 
           <input 
-            placeholder="CPF/PJ" 
+            placeholder="CPF/CNPJ" 
             value = {pj} 
             onChange = {e => setPj(e.target.value) }  
           />
@@ -109,7 +109,7 @@ export default function RegisterCartorio() {
               />
 
             <input 
-              placeholder="numero" 
+              placeholder="número" 
               style={{ width: 120 }} 
               value = {number} 
               onChange = {e => setNumber(e.target.value) }  
