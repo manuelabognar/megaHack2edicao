@@ -1,25 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles.css';
 
 export default function NovaSolicitacao() {
+
+  const [livro, setLivro] = useState('');
+  const [matricula, setMatricula] = useState('');  
+
+  function handleSolicitarMatricula() {
+    alert("Matrícula solicitada com sucesso");
+  }
+
   return (
     <div className="register-container">
       <div className="content">
-        <section>
-          <p>nome do cartorio</p>
-          <p>numero de matricula</p>
-          <p>livro</p>
-          <button>buscar</button>
+       
+        <main>
+          <form>
+
+            <select id="cartorios">
+              <option value="0">Registro de matrícula XPTO</option>
+              <option value="1">5º Cartório de imóveis</option>
+            </select>
+            
+            <input
+              placeholder="livro" 
+              value={livro}
+              onChange={e => setLivro(e.target.value)}
+            />
+          
+            <input
+              placeholder="matricula" 
+              value={matricula}
+              onChange={e => setMatricula(e.target.value)}
+            />
+
+            <button className="button">Buscar</button>
+          </form>
+
           <br/><br/>
+
           <p>resultado da busca</p>
-          <button>Solicitar matrícula</button>
+          <button onClick={handleSolicitarMatricula}>Solicitar matrícula</button>
           <br/><br/>
-          <Link className="back-link" to="/">
+          
+          <Link className="back-link" to="/solicitante">
               Voltar
           </Link>
-        </section>
+        </main>
       </div>
     </div>
   );
