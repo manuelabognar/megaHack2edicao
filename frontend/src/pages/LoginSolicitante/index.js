@@ -7,7 +7,7 @@ import './styles.css';
 
 export default function LoginSolicitante() {
 
-  const { signed, user, signIn } = useAuth();
+  const { signIn } = useAuth();
 
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -50,20 +50,15 @@ export default function LoginSolicitante() {
 
         </form>
 
-        <Link type="button" className="buttonClean" to="/cadastroSolicitante">
+        <Link type="button" className="buttonClean" to="/solicitante/cadastro">
           Cadastre-se
         </Link>
 
-        
-    <Link className="back-link" to="/">
-              Voltar
-            </Link>
+        <Link className="back-link" to="/">
+          Voltar
+        </Link>
 
     </section>
-
-
-            
-
   </div>
   )
 

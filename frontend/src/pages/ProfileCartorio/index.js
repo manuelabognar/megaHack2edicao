@@ -1,18 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import {useAuth} from '../../contexts/auth'
 
 import './styles.css';
 
 function ProfileCartorio () {
 
-  const { signed, user, signOut } = useAuth(); 
+  const { user, signOut } = useAuth(); 
 
   //console.log (signed);
   //console.log (user);
 
   function handleSignOut () {
-    signOut('cartorio');
+    signOut();
   }
 
   async function handleSendMatricula(e) {
@@ -39,9 +38,6 @@ function ProfileCartorio () {
       </nav>
 
       <h1>Solicitações pendentes</h1>
-
-      
-
       <ul>
         <li>
           <form onSubmit={handleSendMatricula}>
@@ -52,17 +48,14 @@ function ProfileCartorio () {
             <p>47238947283</p>
 
             <input name="file" 
-                type="file" 
-                accept="application/pdf"
-              />  
-
+              type="file" 
+              accept="application/pdf"
+            />  
 
             <button className="button" type="submit">
               Enviar matrícula
             </button>  
-          </form>
-          
-                
+          </form>     
         </li>
 
 

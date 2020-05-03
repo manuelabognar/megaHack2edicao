@@ -15,11 +15,11 @@ export default function AuthRoutes () {
       <Switch>
         <Route path="/" exact component={About} />  
 
-        <Route path="/loginCartorio" exact component={loginCartorio} />
-        <Route path="/cadastroCartorio" component={RegisterCartorio} /> 
+        <Route path="/cartorio" exact component={loginCartorio} />
+        <Route path="/cartorio/cadastro" component={RegisterCartorio} /> 
         
-        <Route path="/loginSolicitante" exact component={loginSolicitante} /> 
-        <Route path="/cadastroSolicitante" component={RegisterSolicitante} />  
+        <Route path="/solicitante" exact component={loginSolicitante} /> 
+        <Route path="/solicitante/cadastro" component={RegisterSolicitante} />  
 
       </Switch>
     </BrowserRouter>

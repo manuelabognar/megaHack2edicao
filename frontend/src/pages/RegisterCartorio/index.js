@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
-
 
 export default function RegisterCartorio() {
   const [nome, setNome] = useState('');
@@ -15,13 +14,12 @@ export default function RegisterCartorio() {
   const [number, setNumber] = useState('');
   const [password, setPassword] = useState('');
 
-  const history = useHistory();
-
   async function handleRegister(e) {
     e.preventDefault();
 
       /*
     const data = {
+      nome
       pj,
       email,
       cep,
@@ -36,10 +34,9 @@ export default function RegisterCartorio() {
     try {
       //const response = await api.post('users', data);
       
-      //alert('Cadastro efetuado com sucesso');
+      alert('Cadastro efetuado com sucesso');
       
-      history.push('/');
-
+      
     } catch (err) {
       alert('Erro no cadastro, tente novamente.');
     }
@@ -57,7 +54,7 @@ export default function RegisterCartorio() {
               forma econômica, online e segura
             </p>
 
-            <Link className="back-link" to="/">
+            <Link className="back-link" to="/cartorio">
               Voltar
             </Link>
         </section>
@@ -65,8 +62,14 @@ export default function RegisterCartorio() {
 
         <form onSubmit={ handleRegister } >
 
+          <input
+            placeholder="nome" 
+            value={nome}
+            onChange={e => setNome(e.target.value)}
+          />
+
           <input 
-            placeholder="CPF/PJ" 
+            placeholder="CPF/CNPJ" 
             value = {pj} 
             onChange = {e => setPj(e.target.value) }  
           />
@@ -74,7 +77,6 @@ export default function RegisterCartorio() {
           <input 
             type="email" 
             placeholder="E-mail" 
-            type="email"
             value = {email} 
             onChange = {e => setEmail(e.target.value) }  
           />
@@ -116,7 +118,7 @@ export default function RegisterCartorio() {
             />
           </div>
 
-<input 
+          <input 
             placeholder="Senha" 
             type="password"
             value = {password} 

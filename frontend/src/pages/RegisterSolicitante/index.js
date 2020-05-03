@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
-
 
 export default function RegisterSolicitante() {
   const [nome, setNome] = useState('');
@@ -15,13 +14,12 @@ export default function RegisterSolicitante() {
   const [number, setNumber] = useState('');
   const [password, setPassword] = useState('');
 
-  const history = useHistory();
-
   async function handleRegister(e) {
     e.preventDefault();
 
     /*
     const data = {
+      nome,
       pj,
       email,
       cep,
@@ -36,9 +34,8 @@ export default function RegisterSolicitante() {
     try {
       //const response = await api.post('users', data);
       
-      //alert('Cadastro efetuado com sucesso');
+      alert('Cadastro efetuado com sucesso');
       
-      history.push('/');
 
     } catch (err) {
       alert('Erro no cadastro, tente novamente.');
@@ -57,15 +54,21 @@ export default function RegisterSolicitante() {
               documentos de cartórios.
             </p>
 
-            <Link className="back-link" to="/">
+            <Link className="back-link" to="/solicitante">
               Voltar
             </Link>
         </section>
 
         <form onSubmit={ handleRegister } >
+          
+          <input
+            placeholder="nome" 
+            value={nome}
+            onChange={e => setNome(e.target.value)}
+          />
 
           <input 
-            placeholder="CPF/PJ" 
+            placeholder="CPF/CNPJ" 
             value = {pj} 
             onChange = {e => setPj(e.target.value) }  
           />
@@ -73,7 +76,6 @@ export default function RegisterSolicitante() {
           <input 
             type="email" 
             placeholder="E-mail" 
-            type="email"
             value = {email} 
             onChange = {e => setEmail(e.target.value) }  
           />
@@ -115,14 +117,12 @@ export default function RegisterSolicitante() {
             />
           </div>
 
-<input 
+          <input 
             placeholder="Senha" 
             type="password"
             value = {password} 
             onChange = {e => setPassword(e.target.value) }  
           />
-          
-
 
           <button className="button" type="submit">Cadastrar</button>
         </form>

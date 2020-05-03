@@ -43,7 +43,7 @@ font-size: 30px;
   position: relative;  
 }
 
-.profile-container div ul li button{
+.profile-container div ul li a{
   width: 180px;
   position: absolute;
   right: 24px;
@@ -51,9 +51,6 @@ font-size: 30px;
   border: 0;
 }
 
-.profile-container div ul li button:hover {
-  opacity: 0.8;
-}
 
 .profile-container div ul li strong {
   display: block;
