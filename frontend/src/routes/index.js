@@ -8,10 +8,10 @@ import CartorioRoutes from './cartorio.routes';
 import SolicitanteRoutes from './solicitante.routes';
 
 function Routes() {
-  const {signed} = useAuth();
+  const {signed, user} = useAuth();
 
-  console.log("logado? " + signed);
-  
+  console.log(user);
+
   return signed ? <SolicitanteRoutes /> : <AuthRoutes />;
 }
 

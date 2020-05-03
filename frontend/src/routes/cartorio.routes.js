@@ -9,7 +9,7 @@ export default function CartorioRoutes() {
     <BrowserRouter>
       <Switch>
         <Route path="/sobre" component={About} />
-        <Route path="/" component={ProfileCartorio} />
+        <Route path="/cartorio" component={ProfileCartorio} />
       </Switch>
   </BrowserRouter>
   ); 

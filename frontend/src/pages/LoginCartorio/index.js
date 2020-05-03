@@ -6,7 +6,7 @@ import './styles.css';
 
 export default function LoginCartorio() {
 
-  const { signed, user, signIn } = useAuth();
+  const { signIn } = useAuth();
 
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -49,14 +49,13 @@ export default function LoginCartorio() {
 
         </form>
 
-        <Link type="button" className="buttonClean" to="/cadastroCartorio">
+        <Link type="button" className="buttonClean" to="/cartorio/cadastro">
           Cadastre-se
         </Link>
-
-        
-    <Link className="back-link" to="/">
-              Voltar
-            </Link>
+    
+        <Link className="back-link" to="/">
+          Voltar
+        </Link>
 
     </section>
   </div>

@@ -6,10 +6,7 @@ import './styles.css';
 
 function ProfileCartorio () {
 
-  const { signed, user, signOut } = useAuth(); 
-
-  //console.log (signed);
-  //console.log (user);
+  const { user, signOut } = useAuth(); 
 
   function handleSignOut () {
     signOut();
@@ -26,7 +23,7 @@ function ProfileCartorio () {
         <button title="Logout"  onClick={handleSignOut}> Sair </button>
       </nav>
 
-      <Link className="button">
+      <Link className="button" to="/solicitante/adicionar">
         Solicitar nova matrícula
       </Link>
 
@@ -43,9 +40,9 @@ function ProfileCartorio () {
             <strong>Cartório Responsável</strong> 
             <p> 42º Registro de matrícula XPTO</p>
 
-            <button className="button" type="submit">
+            <Link className="button" to="/solicitante/vizualizar">
               Visualizar Matrícula
-            </button>                    
+            </Link>                    
           </li>
 
           <li>
@@ -58,9 +55,9 @@ function ProfileCartorio () {
             <strong>Cartório Responsável</strong> 
             <p> 42º Registro de matrícula XPTO</p> 
 
-            <button className="button" type="submit">
+            <Link className="button" to="/solicitante/vizualizar">
               Visualizar Matrícula
-            </button>  
+            </Link>   
 
           </li>
 
