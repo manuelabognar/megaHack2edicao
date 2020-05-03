@@ -5,98 +5,73 @@
   margin: 32px auto;
 }
 
-.profile-container header {
-  display: flex;
-  align-items: center;
+.profile-container header h2 {
+font-size: 30px;
 }
 
-.profile-container header span {
-  font-size: 20px;
-  margin-left: 24px;
-  margin-right: 100px;
+.profile-container nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile-container nav span {
+  font-size: 18px;
   color: #505050;
 }
 
-.profile-container header img {
-  height: 64px;
-}
-
-.profile-container header a {
-  flex: 1;
-  height: 60px;
-  border-radius: 4px;
-  border: solid #dcdce6;
-  background: transparent;
-  margin-left: 16px;
-  text-decoration: none;
-  color:#ff5500;
-  font-size: 16px;
-  line-height: 50px;
-  text-align: center;
-  transition: border-color 0.2s;
-}
-
-.profile-container header a:hover {
-  border-color: #999;
-}
-
-.profile-container header button {
-  height: 60px;
-  width: 60px;
-  border-radius: 4px;
-  border: solid #dcdce6;
-  background: transparent;
-  margin-left: 16px;
-  transition: border-color 0.2s;
-}
-
-.profile-container header button:hover {
-  border-color: #999;
+.profile-container a {
+  margin-top: 50px;
 }
 
 .profile-container h1 {
-  margin-top: 80px;
+  margin-top: 70px;
   margin-bottom: 24px;
   color: #505050;
 }
 
-.profile-container ul {
+.profile-container div ul {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 24px;
   list-style: none;
 }
 
-.profile-container ul li {
+.profile-container div ul li {
   background: #fff;
   padding: 24px;
   border-radius: 8px;
   position: relative;  
 }
 
-.profile-container ul li button {
+.profile-container div ul li button{
+  width: 180px;
   position: absolute;
   right: 24px;
-  top:24px;
+  top:80px;
   border: 0;
 }
 
-.profile-container ul li button:hover {
+.profile-container div ul li button:hover {
   opacity: 0.8;
 }
 
-.profile-container ul li strong {
+.profile-container div ul li strong {
   display: block;
   margin-bottom: 16px;
   color: #41414d;
 }
 
-.profile-container ul li p + strong {
+.profile-container div ul li p + strong {
   margin-top: 32px;
 }
 
-.profile-container ul li p {
+.profile-container div ul li p {
   color: #737380;
   line-height: 21px;
   font-size: 16px;
+}
+
+.profile-container div ul li input {
+  margin-top: 30px;
+  margin-bottom: 6px;
 }

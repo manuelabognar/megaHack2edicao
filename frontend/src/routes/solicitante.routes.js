@@ -9,7 +9,7 @@ export default function SolicitanteRoutes() {
     <BrowserRouter>
       <Switch>
         <Route path="/sobre" component={About} />
-        <Route path="/" component={ProfileSolicitante} />
+        <Route path="/"  component={ProfileSolicitante} />
       </Switch>
   </BrowserRouter>
   ); 
