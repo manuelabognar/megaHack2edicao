@@ -11,7 +11,6 @@ export default function LoginCartorio() {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
 
-
   async function handleSignIn(e) {
     e.preventDefault();
 

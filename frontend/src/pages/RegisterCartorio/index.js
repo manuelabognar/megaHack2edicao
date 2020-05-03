@@ -7,7 +7,6 @@ import './styles.css';
 export default function RegisterCartorio() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [passwordConfirm, setPasswordConfirm] = useState('');
 
   const history = useHistory();
 
@@ -17,7 +16,6 @@ export default function RegisterCartorio() {
     const data = {
       email,
       password,
-      passwordConfirm
     };
 
     try {
@@ -66,12 +64,7 @@ export default function RegisterCartorio() {
             onChange = {e => setPassword(e.target.value) }  
           />
 
-          <input 
-            placeholder="Senha" 
-            type="password"
-            value = {passwordConfirm} 
-            onChange = {e => setPasswordConfirm(e.target.value) }  
-          />
+          
           
 
           <button className="button" type="submit">Cadastrar</button>
