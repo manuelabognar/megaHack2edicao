@@ -63,7 +63,7 @@ export default function RegisterCartorio() {
         <form onSubmit={ handleRegister } >
 
           <input
-            placeholder="nome" 
+            placeholder="Nome completo" 
             value={nome}
             onChange={e => setNome(e.target.value)}
           />
