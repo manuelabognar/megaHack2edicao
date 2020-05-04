@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import logoImg from '../../assets/logo.png';
+
 import './styles.css';
 
 export default function RegisterCartorio() {
@@ -46,17 +48,17 @@ export default function RegisterCartorio() {
     <div className="register-container">
       <div className="content">
         <section>
-          <h2 className="logo">Sistema de Consulta de Matrículas</h2>
+          <img src={logoImg} alt="SCM"></img>
 
-            <h1>Cadastro de cartórios</h1>
-            <p>
-              Cadastre-se, e facilite o envio de documentos de 
-              forma econômica, online e segura
-            </p>
+          <h1>Cadastro de cartórios</h1>
+          <p>
+            Cadastre-se, e facilite o envio de documentos de 
+            forma econômica, online e segura
+          </p>
 
-            <Link className="back-link" to="/cartorio">
-              Voltar
-            </Link>
+          <Link className="back-link" to="/cartorio">
+            Voltar
+          </Link>
         </section>
 
 

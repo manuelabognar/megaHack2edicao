@@ -1,6 +1,8 @@
 import React from 'react';
 import {useAuth} from '../../contexts/auth'
 
+import logoImg from '../../assets/logo.png';
+
 import './styles.css';
 
 function ProfileCartorio () {
@@ -29,7 +31,7 @@ function ProfileCartorio () {
   return (
     <div className="profile-container">
       <header>        
-        <h2 className="logo">Sistema de Consulta de Matrículas</h2>
+          <img src={logoImg} alt="SCM"></img>
       </header>
 
       <nav>

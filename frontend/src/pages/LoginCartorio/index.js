@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {useAuth} from '../../contexts/auth';
 import { Link } from 'react-router-dom';
 
+import logoImg from '../../assets/logo.png';
 import './styles.css';
 
 export default function LoginCartorio() {
@@ -28,7 +29,8 @@ export default function LoginCartorio() {
     <section className="form">
 
         <form onSubmit = { handleSignIn } >
-          <h2 className="logo">Sistema de Consulta de Matrículas</h2>
+        
+          <img src={logoImg} alt="SCM"></img>
           <p>Login Cartório</p>
 
           <input 

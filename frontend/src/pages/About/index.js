@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import logoImg from '../../assets/logo.png';
+
 import './styles.css';
 
 export default function About() {
@@ -10,7 +12,7 @@ export default function About() {
       <div className="content">
         
         <main>
-          <h2 className="logo">Sistema de Consulta de Matrículas</h2>
+          <img src={logoImg} alt="SCM"></img>
           <p>
             Unimos cartórios de todo o Brasil para facilitar a transação de documentos 
             de forma prática, fácil e segura para ambas as partes

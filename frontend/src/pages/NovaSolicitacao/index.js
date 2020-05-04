@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+
+import logoImg from '../../assets/logo.png';
 
 import './styles.css';
 
@@ -8,10 +10,14 @@ export default function NovaSolicitacao() {
   const [livro, setLivro] = useState('');
   const [matricula, setMatricula] = useState('');  
 
+  const history = useHistory();
+
   function handleSolicitarMatricula(e) {
     e.preventDefault();
     
-    //alert("Matrícula solicitada com sucesso");
+    alert("Matrícula solicitada com sucesso");
+
+    history.push('/solicitante')
   }
 
   return (
@@ -19,7 +25,7 @@ export default function NovaSolicitacao() {
       <div className="content">
        
       <section>
-          <h2 className="logo">Sistema de Consulta de Matrículas</h2>
+          <img src={logoImg} alt="SCM"></img>
 
             <h1>Solicitar matrícula</h1>
             <p>
