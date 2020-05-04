@@ -6,6 +6,7 @@ import './styles.css';
 
 export default function LoginSolicitante() {
 
+
   const { signInSolicitante } = useAuth();
 
   const [password, setPassword] = useState('');
@@ -18,7 +19,6 @@ export default function LoginSolicitante() {
       //const response = await api.post('sessions', { email });
 
       signInSolicitante();
-
     } catch (err) {
       alert('Falha no login, tente novamente.');
     }

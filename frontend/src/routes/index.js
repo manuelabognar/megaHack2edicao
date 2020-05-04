@@ -9,7 +9,7 @@ import CartorioRoutes from './cartorio.routes';
 import SolicitanteRoutes from './solicitante.routes';
 
 function Routes() {
-  const {signed} = useAuth();
+  const {signed, user} = useAuth();
 
   if (AuthCartorio.getAuth() === true)
     return <CartorioRoutes />

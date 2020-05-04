@@ -12,8 +12,8 @@ export function AuthProvider({ children }){
 
   useEffect(() => {
     async function loadStorageData () { 
-      const storageUser = await localStorage.getItem('@RNAuth:user');
-      const storageToken = await localStorage.getItem('@RNAuth:token');
+      const storageUser = localStorage.getItem('@RNAuth:user');
+      const storageToken = localStorage.getItem('@RNAuth:token');
 
       if (storageUser && storageToken) {
         api.defaults.headers['Authorization'] = `Bearer ${storageToken}`;
@@ -23,6 +23,7 @@ export function AuthProvider({ children }){
 
     loadStorageData();
   }, []);
+
 
    
   async function signInSolicitante() {
