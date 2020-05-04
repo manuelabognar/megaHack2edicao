@@ -4,6 +4,9 @@ import * as auth from '../services/auth';
 import AuthSolicitante from './authSolicitante';
 import AuthCartorio from './authCartorio';
 
+import AuthSolicitante from './authSolicitante';
+import AuthCartorio from './authCartorio';
+
 const AuthContext = createContext();
 
 export function AuthProvider({ children }){
@@ -25,14 +28,11 @@ export function AuthProvider({ children }){
   }, []);
 
 
-   
   async function signInSolicitante() {
 
     AuthSolicitante.authenticate();
 
     const response = await auth.signInSolicitante();
-
-    console.log(response);
 
     setUser(response.user);
 
@@ -40,7 +40,6 @@ export function AuthProvider({ children }){
 
     await localStorage.setItem('@MegaHack:user', JSON.stringify(response.user));
     await localStorage.setItem('@Auth:token', response.token);
-
   }
 
   async function signInCartorio() {
@@ -49,15 +48,12 @@ export function AuthProvider({ children }){
 
     const response = await auth.signInCartorio();
 
-    console.log(response);
-
     setUser(response.user);
 
     api.defaults.headers['Authorization'] = `Bearer ${response.token}`;
 
     await localStorage.setItem('@MegaHack:user', JSON.stringify(response.user));
     await localStorage.setItem('@Auth:token', response.token);
-
   }
 
   function signOut() {

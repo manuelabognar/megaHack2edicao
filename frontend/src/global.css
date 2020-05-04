@@ -13,6 +13,11 @@ body {
   -webkit-flow-smoothing: antialiased;
 }
 
+img {
+  height: 120px;
+  margin-bottom: 15px;
+}
+
 input, button {
   font: 400 18px Roboto, sans-serif;
 }

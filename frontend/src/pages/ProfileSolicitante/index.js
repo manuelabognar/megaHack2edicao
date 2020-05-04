@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {useAuth} from '../../contexts/auth'
 
+import logoImg from '../../assets/logo.png';
 import './styles.css';
 
 function ProfileCartorio () {
@@ -15,7 +16,7 @@ function ProfileCartorio () {
   return (
     <div className="profile-container">
       <header>        
-        <h2 className="logo">Sistema de Consulta de Matrículas</h2>
+        <img src={logoImg} alt="SCM"></img>
       </header>
 
       <nav>
@@ -40,7 +41,7 @@ function ProfileCartorio () {
             <strong>Cartório Responsável</strong> 
             <p> 42º Registro de matrícula XPTO</p>
 
-            <Link className="button" to="/solicitante/vizualizar">
+            <Link className="button" to="/solicitante/visualizar">
               Visualizar Matrícula
             </Link>                    
           </li>
@@ -55,7 +56,7 @@ function ProfileCartorio () {
             <strong>Cartório Responsável</strong> 
             <p> 42º Registro de matrícula XPTO</p> 
 
-            <Link className="button" to="/solicitante/vizualizar">
+            <Link className="button" to="/solicitante/visualizar">
               Visualizar Matrícula
             </Link>   
 

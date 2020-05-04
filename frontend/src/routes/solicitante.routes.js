@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import ProfileSolicitante from '../pages/ProfileSolicitante';
 import NovaSolicitacao from '../pages/NovaSolicitacao';
-import VizualizarSolicitacao from '../pages/VizualizarSolicitacao';
+import VisualizarSolicitacao from '../pages/VisualizarSolicitacao';
 
 export default function SolicitanteRoutes() {
   return (
@@ -11,7 +11,7 @@ export default function SolicitanteRoutes() {
       <Switch>
         <Route path="/solicitante" exact component={ProfileSolicitante} />
         <Route path="/solicitante/adicionar" component={NovaSolicitacao} />
-        <Route path="/solicitante/vizualizar" component={VizualizarSolicitacao} />
+        <Route path="/solicitante/visualizar" component={VisualizarSolicitacao} />
       </Switch>
   </BrowserRouter>
   ); 

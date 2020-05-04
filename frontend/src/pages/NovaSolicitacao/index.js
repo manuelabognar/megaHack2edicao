@@ -1,12 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+
+import logoImg from '../../assets/logo.png';
+
 
 import './styles.css';
 
 export default function NovaSolicitacao() {
+  
+  const history = useHistory();
 
-  function handleSolicitarMatricula() {
+  function handleSolicitarMatricula(e) {
+    e.preventDefault();
+    
     alert("Matrícula solicitada com sucesso");
+
+    history.push('/solicitante')
   }
 
   return (
@@ -14,14 +23,14 @@ export default function NovaSolicitacao() {
       <div className="content">
        
       <section>
-          <h2 className="logo">Sistema de Consulta de Matrículas</h2>
+          <img src={logoImg} alt="SCM"></img>
 
             <h1>Solicitar matrícula</h1>
             <p>
               Preencha os campos do formuláro com os dados referente ao documento desejado.
             </p>
             <p>
-              O cartório responsável receberá sua solicitação e em retornará em breve.
+              O cartório responsável receberá sua solicitação e retornará em breve.
             </p>
 
             <Link className="back-link" to="/solicitante">

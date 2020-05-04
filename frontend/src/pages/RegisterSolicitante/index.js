@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import logoImg from '../../assets/logo.png';
+          
 import './styles.css';
 
 export default function RegisterSolicitante() {
@@ -46,7 +47,7 @@ export default function RegisterSolicitante() {
     <div className="register-container">
       <div className="content">
         <section>
-          <h2 className="logo">Sistema de Consulta de Matrículas</h2>
+          <img src={logoImg} alt="SCM"></img>
 
             <h1>Cadastro</h1>
             <p>
