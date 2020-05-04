@@ -1,6 +1,8 @@
 import React, {createContext, useState, useEffect, useContext} from 'react';
 import api from '../services/api';
 import * as auth from '../services/auth';
+import AuthSolicitante from './authSolicitante';
+import AuthCartorio from './authCartorio';
 
 import AuthSolicitante from './authSolicitante';
 import AuthCartorio from './authCartorio';
@@ -38,7 +40,6 @@ export function AuthProvider({ children }){
 
     await localStorage.setItem('@MegaHack:user', JSON.stringify(response.user));
     await localStorage.setItem('@Auth:token', response.token);
-
   }
 
   async function signInCartorio() {
@@ -53,7 +54,6 @@ export function AuthProvider({ children }){
 
     await localStorage.setItem('@MegaHack:user', JSON.stringify(response.user));
     await localStorage.setItem('@Auth:token', response.token);
-
   }
 
   function signOut() {
@@ -64,7 +64,7 @@ export function AuthProvider({ children }){
   }
 
   return (
-    <AuthContext.Provider value={{ signed:!!user, user, signInSolicitante, signInCartorio ,signOut }}>
+    <AuthContext.Provider value={{ signed:!!user, user, signInSolicitante, signInCartorio, signOut }}>
       { children }
     </AuthContext.Provider>
   );

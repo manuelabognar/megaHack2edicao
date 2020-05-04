@@ -11,7 +11,6 @@ import SolicitanteRoutes from './solicitante.routes';
 
 function Routes() {
   const { signed } = useAuth();
-  if (signed) console.log("logado");
 
   if (AuthSolicitante.getAuth() === true)
     return <SolicitanteRoutes />;

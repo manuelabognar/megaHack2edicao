@@ -3,6 +3,7 @@ import {useAuth} from '../../contexts/auth';
 import { Link } from 'react-router-dom';
 
 import logoImg from '../../assets/logo.png';
+
 import './styles.css';
 
 export default function LoginSolicitante() {
@@ -19,7 +20,6 @@ export default function LoginSolicitante() {
       //const response = await api.post('sessions', { email });
 
       signInSolicitante();
-
     } catch (err) {
       alert('Falha no login, tente novamente.');
     }
