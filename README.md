@@ -1,4 +1,4 @@
-# megaHack2edicao
+# Mega Hack 2ª edição
 Projeto para o hackathon da Mega Hack 2ª edição
 
 
