@@ -40,7 +40,7 @@ function ProfileCartorio () {
             <strong>Cartório Responsável</strong> 
             <p> 42º Registro de matrícula XPTO</p>
 
-            <Link className="button" to="/solicitante/vizualizar">
+            <Link className="button" to="/solicitante/visualizar">
               Visualizar Matrícula
             </Link>                    
           </li>
@@ -55,7 +55,7 @@ function ProfileCartorio () {
             <strong>Cartório Responsável</strong> 
             <p> 42º Registro de matrícula XPTO</p> 
 
-            <Link className="button" to="/solicitante/vizualizar">
+            <Link className="button" to="/solicitante/visualizar">
               Visualizar Matrícula
             </Link>   
 

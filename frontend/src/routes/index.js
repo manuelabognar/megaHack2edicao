@@ -1,18 +1,25 @@
 import React from 'react';
 
+import AuthRoutes from './auth.routes';
 import {useAuth} from '../contexts/auth';
 
-import AuthRoutes from './auth.routes';
+import AuthSolicitante from '../contexts/authSolicitante';
+import AuthCartorio from '../contexts/authCartorio';
 
 import CartorioRoutes from './cartorio.routes';
 import SolicitanteRoutes from './solicitante.routes';
 
 function Routes() {
-  const {signed, user} = useAuth();
+  const { signed } = useAuth();
+  if (signed) console.log("logado");
 
-  console.log(user);
+  if (AuthSolicitante.getAuth() === true)
+    return <SolicitanteRoutes />;
 
-  return signed ? <SolicitanteRoutes /> : <AuthRoutes />;
+  if (AuthCartorio.getAuth() === true)
+    return <CartorioRoutes />;
+
+  return <AuthRoutes />
 }
 
 export default Routes;

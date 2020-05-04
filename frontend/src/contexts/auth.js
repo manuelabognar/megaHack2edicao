@@ -2,6 +2,9 @@ import React, {createContext, useState, useEffect, useContext} from 'react';
 import api from '../services/api';
 import * as auth from '../services/auth';
 
+import AuthSolicitante from './authSolicitante';
+import AuthCartorio from './authCartorio';
+
 const AuthContext = createContext();
 
 export function AuthProvider({ children }){
@@ -23,10 +26,26 @@ export function AuthProvider({ children }){
   }, []);
 
 
-  async function signIn() {
-    const response = await auth.signInCartorio();
+  async function signInSolicitante() {
 
-    console.log(response);
+    AuthSolicitante.authenticate();
+
+    const response = await auth.signInSolicitante();
+
+    setUser(response.user);
+
+    api.defaults.headers['Authorization'] = `Bearer ${response.token}`;
+
+    await localStorage.setItem('@MegaHack:user', JSON.stringify(response.user));
+    await localStorage.setItem('@Auth:token', response.token);
+
+  }
+
+  async function signInCartorio() {
+
+    AuthCartorio.authenticate();
+
+    const response = await auth.signInCartorio();
 
     setUser(response.user);
 
@@ -40,10 +59,12 @@ export function AuthProvider({ children }){
   function signOut() {
     localStorage.clear();
     setUser(null);
+    AuthSolicitante.signout();
+    AuthCartorio.signout();
   }
 
   return (
-    <AuthContext.Provider value={{ signed:!!user, user, signIn, signOut }}>
+    <AuthContext.Provider value={{ signed:!!user, user, signInSolicitante, signInCartorio ,signOut }}>
       { children }
     </AuthContext.Provider>
   );

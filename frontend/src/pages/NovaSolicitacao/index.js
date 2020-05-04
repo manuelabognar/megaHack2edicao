@@ -8,8 +8,10 @@ export default function NovaSolicitacao() {
   const [livro, setLivro] = useState('');
   const [matricula, setMatricula] = useState('');  
 
-  function handleSolicitarMatricula() {
-    alert("Matrícula solicitada com sucesso");
+  function handleSolicitarMatricula(e) {
+    e.preventDefault();
+    
+    //alert("Matrícula solicitada com sucesso");
   }
 
   return (
@@ -24,7 +26,7 @@ export default function NovaSolicitacao() {
               Preencha os campos do formuláro com os dados referente ao documento desejado.
             </p>
             <p>
-              O cartório responsável receberá sua solicitação e em retornará em breve.
+              O cartório responsável receberá sua solicitação e retornará em breve.
             </p>
 
             <Link className="back-link" to="/solicitante">
