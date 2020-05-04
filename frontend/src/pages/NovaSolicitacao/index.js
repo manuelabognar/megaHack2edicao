@@ -16,39 +16,50 @@ export default function NovaSolicitacao() {
     <div className="register-container">
       <div className="content">
        
-        <main>
-          <form>
+      <section>
+          <h2 className="logo">Sistema de Consulta de Matrículas</h2>
 
-            <select id="cartorios">
-              <option value="0">Registro de matrícula XPTO</option>
-              <option value="1">5º Cartório de imóveis</option>
+            <h1>Solicitar matrícula</h1>
+            <p>
+              Preencha os campos do formuláro com os dados referente ao documento desejado.
+            </p>
+            <p>
+              O cartório responsável receberá sua solicitação e em retornará em breve.
+            </p>
+
+            <Link className="back-link" to="/solicitante">
+              Voltar
+            </Link>
+        </section>
+
+        <section>
+          <form onSubmit={handleSolicitarMatricula}>
+
+            <select id="cartorios" className="appearance-select">
+              <option value="0" selected disabled>Selecione o cartório</option>
+              <option value="1">10º Registro de matrícula Vila Mariana</option>
+              <option value="2">5º Cartório de imóveis</option>
+              <option value="3">4º Cartório de imóveis de São Paulo</option>
             </select>
             
             <input
-              placeholder="livro" 
+              placeholder="Livro" 
               value={livro}
               onChange={e => setLivro(e.target.value)}
             />
           
             <input
-              placeholder="matricula" 
+              placeholder="Matricula" 
               value={matricula}
               onChange={e => setMatricula(e.target.value)}
             />
 
-            <button className="button">Buscar</button>
+            <button className="button" type="submit">Solicitar matrícula</button>
           </form>
-
-          <br/><br/>
-
-          <p>resultado da busca</p>
-          <button onClick={handleSolicitarMatricula}>Solicitar matrícula</button>
-          <br/><br/>
           
-          <Link className="back-link" to="/solicitante">
-              Voltar
-          </Link>
-        </main>
+        </section>
+
+        
       </div>
     </div>
   );
