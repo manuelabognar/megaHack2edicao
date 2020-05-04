@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import {useAuth} from '../../contexts/auth'
+import {useAuth} from '../../contexts/auth';
+import { Link } from 'react-router-dom';
 
 
 import './styles.css';
 
-export default function SignIn() {
+export default function LoginSolicitante() {
 
-  const { signed, user, signIn } = useAuth();
+  const { signIn } = useAuth();
 
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
-
 
   async function handleSignIn(e) {
     e.preventDefault();
@@ -29,7 +29,8 @@ export default function SignIn() {
     <section className="form">
 
         <form onSubmit = { handleSignIn } >
-          <h1>Sistema de Consulta de Matrículas</h1>
+          <h2 className="logo">Sistema de Consulta de Matrículas</h2>
+          <p>Login Solicitante</p>
 
           <input 
             placeholder = "E-mail" 
@@ -49,12 +50,15 @@ export default function SignIn() {
 
         </form>
 
-        <button className="button">Cadastrar-se</button>
+        <Link type="button" className="buttonClean" to="/solicitante/cadastro">
+          Cadastre-se
+        </Link>
 
-        <button className="buttonClean">Sobre nós</button>
+        <Link className="back-link" to="/">
+          Voltar
+        </Link>
 
     </section>
-
   </div>
   )
 
