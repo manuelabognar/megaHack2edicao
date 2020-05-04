@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom';
 
 import './styles.css';
 
-export default function LoginSolicitante() {
+export default function LoginCartorio() {
 
-
-  const { signInSolicitante } = useAuth();
+  const { signIn } = useAuth();
 
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -18,7 +17,7 @@ export default function LoginSolicitante() {
     try {
       //const response = await api.post('sessions', { email });
 
-      signInSolicitante();
+      signIn();
     } catch (err) {
       alert('Falha no login, tente novamente.');
     }
@@ -30,7 +29,7 @@ export default function LoginSolicitante() {
 
         <form onSubmit = { handleSignIn } >
           <h2 className="logo">Sistema de Consulta de Matrículas</h2>
-          <p>Login Solicitante</p>
+          <p>Login Cartório</p>
 
           <input 
             placeholder = "E-mail" 
@@ -50,10 +49,10 @@ export default function LoginSolicitante() {
 
         </form>
 
-        <Link type="button" className="buttonClean" to="/solicitante/cadastro">
+        <Link type="button" className="buttonClean" to="/cartorio/cadastro">
           Cadastre-se
         </Link>
-
+    
         <Link className="back-link" to="/">
           Voltar
         </Link>

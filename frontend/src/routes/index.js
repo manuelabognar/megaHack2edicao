@@ -1,8 +1,9 @@
 import React from 'react';
 
 import {useAuth} from '../contexts/auth';
-
 import AuthRoutes from './auth.routes';
+import AuthSolicitante from '../contexts/authSolicitante';
+import AuthCartorio from '../contexts/authCartorio';
 
 import CartorioRoutes from './cartorio.routes';
 import SolicitanteRoutes from './solicitante.routes';
@@ -10,9 +11,13 @@ import SolicitanteRoutes from './solicitante.routes';
 function Routes() {
   const {signed, user} = useAuth();
 
-  console.log(user);
+  if (AuthCartorio.getAuth() === true)
+    return <CartorioRoutes />
 
-  return signed ? <SolicitanteRoutes /> : <AuthRoutes />;
+  if (AuthSolicitante.getAuth() === true)
+    return <SolicitanteRoutes />
+
+  return <AuthRoutes />;
 }
 
 export default Routes;

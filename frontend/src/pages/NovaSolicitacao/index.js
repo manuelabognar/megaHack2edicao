@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './styles.css';
 
 export default function NovaSolicitacao() {
-
-  const [livro, setLivro] = useState('');
-  const [matricula, setMatricula] = useState('');  
 
   function handleSolicitarMatricula() {
     alert("Matrícula solicitada com sucesso");
@@ -44,14 +41,10 @@ export default function NovaSolicitacao() {
             
             <input
               placeholder="Livro" 
-              value={livro}
-              onChange={e => setLivro(e.target.value)}
             />
           
             <input
               placeholder="Matricula" 
-              value={matricula}
-              onChange={e => setMatricula(e.target.value)}
             />
 
             <button className="button" type="submit">Solicitar matrícula</button>

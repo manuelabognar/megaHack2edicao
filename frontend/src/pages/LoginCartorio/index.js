@@ -6,7 +6,8 @@ import './styles.css';
 
 export default function LoginCartorio() {
 
-  const { signIn } = useAuth();
+
+  const { signInCartorio } = useAuth();
 
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -17,7 +18,8 @@ export default function LoginCartorio() {
     try {
       //const response = await api.post('sessions', { email });
 
-      signIn();
+      signInCartorio();
+
     } catch (err) {
       alert('Falha no login, tente novamente.');
     }

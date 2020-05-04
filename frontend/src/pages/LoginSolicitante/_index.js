@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import {useAuth} from '../../contexts/auth';
 import { Link } from 'react-router-dom';
 
+
 import './styles.css';
 
 export default function LoginSolicitante() {
 
-
-  const { signInSolicitante } = useAuth();
+  const { signIn } = useAuth();
 
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -18,7 +18,7 @@ export default function LoginSolicitante() {
     try {
       //const response = await api.post('sessions', { email });
 
-      signInSolicitante();
+      signIn();
     } catch (err) {
       alert('Falha no login, tente novamente.');
     }
