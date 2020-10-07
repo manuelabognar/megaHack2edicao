@@ -5,9 +5,7 @@ Projeto para o hackathon da Mega Hack 2ª edição
 Sistema de Consulta de Matrículas (SMC)
 
 
-[![solarized dualmode](https://github.com/manuelabognar/megaHack2edicao/blob/master/screenshot/cartorio-final.gif)](#features)
-
-[![solarized dualmode](https://github.com/manuelabognar/megaHack2edicao/blob/master/screenshot/cartorio-solicitante-final.gif)](#features)
+## Sobre
 
 Pensando em uma forma de otimizar o processo de obtenção de matrículas, temos o prazer de apresentar 
 o Sistema de Consulta de Matrículas, SCM. O sistema foi pensado para garantir o acesso rápido, 
@@ -20,3 +18,11 @@ locomoção, espera e prazos.
 O SCM é a solução ideal para otimização e pode ser utilizado pelos players do nosso mercado 
 imobiliário, como Bancos, Financeiras ou Startups que possuem o produto de emprestimos com garantial real, 
 incorporadores, empresas de Asset Management com produto de real estate e despachantes.
+
+
+### Acesso solicitante
+[![solarized dualmode](https://github.com/manuelabognar/megaHack2edicao/blob/master/screenshot/cartorio-solicitante-final.gif)](#features)
+
+
+### Acesso Cartório
+[![solarized dualmode](https://github.com/manuelabognar/megaHack2edicao/blob/master/screenshot/cartorio-final.gif)](#features)
